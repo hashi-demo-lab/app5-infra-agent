@@ -15,7 +15,7 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2.12.2": {}
     },
 
-  "postCreateCommand": "mkdir -p ~/.terraform.d && cat > ~/.terraform.d/credentials.tfrc.json << EOF\n{\n  \"credentials\": {\n    \"app.terraform.io\": {\n      \"token\": \"${TFE_TOKEN}\"\n    }\n  }\n}\nEOF",
+  "postStartCommand": "mkdir -p ~/.terraform.d && echo '{\"credentials\":{\"app.terraform.io\":{\"token\":\"'${TFE_TOKEN}'\"}}}' > ~/.terraform.d/credentials.tfrc.json",
 
   "customizations": {
     "vscode": {
