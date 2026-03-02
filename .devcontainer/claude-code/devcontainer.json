@@ -12,7 +12,7 @@
     "--privileged"
   ],
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2.12.2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2.16.0": {}
     },
 
   "postStartCommand": "mkdir -p ~/.terraform.d && echo '{\"credentials\":{\"app.terraform.io\":{\"token\":\"'${TFE_TOKEN}'\"}}}' > ~/.terraform.d/credentials.tfrc.json",
